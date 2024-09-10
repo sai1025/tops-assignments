@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class GreatestOfThree
+class Assign1
 {
 	public static void maxOfThree(int a,int b,int c)
 	{
