@@ -1,0 +1,3 @@
+i. Select unique job from EMP table. 
+
+SQL Query=> 
