@@ -94,10 +94,13 @@ private HashSet<Book> bs;
 		while(itr.hasNext())
 		{
 			b=itr.next();
-			if(b.getId()==id)
+			if(b.getId()==id) {
+				System.out.println(b);
 				return b;
+				
+			}
 		}
-			return b;	
+			return null;	
 	}
 	public Book search(String name)
 	{
@@ -111,7 +114,7 @@ private HashSet<Book> bs;
 			if(b.getName().equals(name))
 				return b;
 		}
-		return b;
+		return null;
 	}
 	public void editBook()
 	{
@@ -157,11 +160,11 @@ private HashSet<Book> bs;
 	public void display()
 	{
 		Iterator<Book> itr=bl.iterator();
-		System.out.println("Category\tId\tBookName\tAuthor\tquantity\tprice\tRackNo");
+		System.out.println("\nCategory\tId\tBook\tAuthor\tquantity\tprice\tRackNo");
 		while(itr.hasNext())
 		{
 			Book b=itr.next();
-			System.out.println(b.getCategory()+"\t"+b.getName()+"\t"+b.getAuthor()+"\t"+b.getQty()+"\t"+b.getPrice()+"\t");
+			System.out.println(b.getCategory()+"\t"+b.getId()+"\t"+b.getName()+"\t"+b.getAuthor()+"\t  "+b.getQty()+"\t  "+b.getPrice()+"\t");
 		}
 	}
 }
