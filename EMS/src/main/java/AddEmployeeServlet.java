@@ -14,7 +14,7 @@ import java.sql.SQLException;
 /**
  * Servlet implementation class AddEmployeeServlet
  */
-@WebServlet("/register")
+//@WebServlet("/register")
 public class AddEmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private EmpDAO dao=null;
