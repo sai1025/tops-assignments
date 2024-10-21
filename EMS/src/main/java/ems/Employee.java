@@ -1,12 +1,14 @@
+package ems;
 import java.io.Serializable;
 
 /**
  * JavaBean class used in jsp action tags.
- * @author Shubham Kumar
+ * @author sainath kadam
  */
 public class Employee implements Serializable {
     
     private static final long serialVersionUID = 1L;
+    private int id;
     private String firstName;
     private String lastName;
     private String email;
@@ -14,6 +16,9 @@ public class Employee implements Serializable {
     private String address;
     private String contact;
     private String gender;
+    public Employee() {
+		// TODO Auto-generated constructor stub
+	}
     public String getFirstName() {
         return firstName;
     }
@@ -56,5 +61,11 @@ public class Employee implements Serializable {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 }

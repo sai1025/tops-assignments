@@ -1,3 +1,4 @@
+package ems;
 
 
 import jakarta.servlet.RequestDispatcher;
@@ -78,7 +79,8 @@ public class AddEmployeeServlet extends HttpServlet {
 			response.setContentType("text/html");
 			PrintWriter pw=response.getWriter();
 			pw.println("<h1> employee added </h>");
-			RequestDispatcher rd=request.getRequestDispatcher("home.html");
+			
+			RequestDispatcher rd=request.getRequestDispatcher("index.html");
 			rd.forward(request, response);
 			
 		}

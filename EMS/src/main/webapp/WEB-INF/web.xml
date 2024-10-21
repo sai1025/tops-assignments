@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
-  <display-name>EMS</display-name>
+  <display-name>EMS1</display-name>
   <welcome-file-list>
-    <welcome-file>home.html</welcome-file>
-    
+    <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
     <display-name>AddEmployeeServlet</display-name>
     <servlet-name>AddEmployeeServlet</servlet-name>
-    <servlet-class>AddEmployeeServlet</servlet-class>
+    <servlet-class>ems.AddEmployeeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddEmployeeServlet</servlet-name>
     <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateEmployeeServlet</display-name>
+    <servlet-name>UpdateEmployeeServlet</servlet-name>
+    <servlet-class>ems.UpdateEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateEmployeeServlet</servlet-name>
+    <url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteEmployeeServlet</display-name>
+    <servlet-name>DeleteEmployeeServlet</servlet-name>
+    <servlet-class>ems.DeleteEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteEmployeeServlet</servlet-name>
+    <url-pattern>/delete</url-pattern>
   </servlet-mapping>
 </web-app>
