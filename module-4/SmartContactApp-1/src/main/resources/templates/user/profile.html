@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{user/base::Layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+<div class="card">
+
+	<div class="card-body">
+		<div class="rows">
+			<div class="col-md-8 offset-md-2">
+		
+			<div class="container text-center mt-10">
+			<img alt="" th:style="'width:60px;border-radius:50%'" th:src="${user.imageurl}">
+			<h2 th:text="${user.name}"></h2><br>
+			<p th:style="'font-style:italic;'" th:text="${user.about}">
+			
+			
+			
+			
+			<table class="table  table-borderless table-hover">
+						  <tbody>
+						    <tr style="height: 10px;">
+						      <td scope="col"><i class="fa-solid fa-envelope"></i></td>
+						      <td scope="col"><a href="#" th:text="${user.email}"></a></td>
+						    </tr>
+						   
+						  </tbody>
+			</table>
+			</div>
+			
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</section>
+</body>
+</html>

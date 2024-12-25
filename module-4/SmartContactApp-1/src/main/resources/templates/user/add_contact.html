@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{user/base::Layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+	<div class="container text-center">
+			<div  th:if="${session.message}" th:classappend="${session.message.type}" class="alert " role="alert">
+ 				 <p th:text="${session.message.content}"></p>
+ 				<th:block th:text="${@sessionHelper.removeMessageFromSession()}" > </th:block>
+			</div>
+	</div>
+	<div class="card">
+		<div class="cord-body mr-5">
+			<h1 class="text-center">Add Contact</h1>
+			
+			<div class="container-fluid mt-4">
+				
+				<div class="rows">
+				
+					<div class="col-md-10 offset-md-1">
+						
+						<form action="#" th:object="${contact}"
+						th:action="@{/user/process_contact}"
+						enctype="multipart/form-data" method="post" class="mt-2">					
+						
+						<div class="input-group mt-4">
+						
+							<div class="input-group-prepend">
+							
+								<div class="input-group-text">
+								
+								<i class="fa fa-plus"></i>
+								</div>
+							</div>
+							
+							<input type="text" class="form-control" name="name" placeholder="enter full name here" id="name"/>
+						</div>
+						
+						<div class="input-group mt-3">
+						
+							<div class="input-group-prepend">
+							
+								<div class="input-group-text">
+								
+								<i class="fa-solid fa-envelope"></i>
+								</div>
+							</div>
+							
+							<input type="text" class="form-control" name="email" placeholder="enter email here" id="email"/>
+						</div>
+						
+						<div class="input-group mt-3">
+						
+							<div class="input-group-prepend">
+							
+								<div class="input-group-text">
+								
+								<i class="fa-solid fa-phone"></i>
+								</div>
+							</div>
+							
+							<input type="number" class="form-control" name="phone" placeholder="enter phone no here" id="phone"/>
+						</div>
+						
+						<div class="input-group mt-3">
+						
+							<div class="input-group-prepend">
+							
+								<div class="input-group-text">
+								
+								<i class="fa-solid fa-user"></i>
+								</div>
+							</div>
+							
+							<input type="text" class="form-control" name="work" placeholder="enter work here" id="work"/>
+						</div>
+						
+						<div class="input-group mt-4">
+						
+						<textarea rows="10" class="form-control" placeholder="enter your description" 
+						name="description" id="description"></textarea>
+							
+						</div>
+						<div class="input-group mt-2">
+						<input id="profile_input" type="file" name="profile_picture">
+						<img id="upload_preview" >
+						</div>
+						<div class=" container text-center mt-2">
+							<button type="submit" class="btn btn-primary">Add Contact</button>
+						</div>
+						
+						
+						
+						</form>
+					
+					</div>
+					
+				</div>	
+			
+			</div>
+				
+		
+		
+		</div>
+		
+	</div>
+	
+	
+	
+	
+
+
+</section>
+</body>
+</html>

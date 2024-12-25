@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+
+body
+{
+	background: #e2e2e2;
+}
+
+.bg-primary
+{
+	background: #009688!important;
+}
+nav
+{
+	color:white!important;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+
+
+.links{
+color: white;
+}
+
+/* sidebar style */
+
+@media only screen and (max-width:600px){
+
+	.sidebar{
+	display:none;
+	width:80% !important;
+	background: white;
+	height:100vh;
+	position: fixed;
+	padding-top: 20px;
+	}
+	.content {
+	margin-left: 0%!important;
+	}
+}
+.sidebar{
+	width:18%;
+	background: white;
+	height:100%;
+	position: fixed;
+	padding-top: 45px;
+}
+.sidebar a{
+	display:block;
+	width:100%;
+	padding:10px 20px;
+	text-decoration: none;
+	color:gray;
+}
+.sidebar a:hover{
+	background: #e2e2e2;
+}
+.sidebar .divider
+{
+	height: .5px;
+	width:100%;
+	background: #e2e2e2;
+	margin-top: 10px;
+}
+.sidebar .cross_btn
+{
+	position:absolute;
+	top:0;
+	right:40px;
+	font-size:36px;
+	cursor: pointer;
+}
+.content{
+	margin-left:20%;
+}
+.content .bars{cursor:pointer;}
+
+.links a{
+margin-left: 4px;
+}
